@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1766340973074,
+    "description" : "Nifi 2.7.2 flow created to ingest Customer source table records into a data warehouse staging area",
+    "identifier" : "banking-source-customer-ingestion-flow",
+    "lastModifiedTimestamp" : 1766340973074,
+    "name" : "banking-source-customer-ingestion-flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}

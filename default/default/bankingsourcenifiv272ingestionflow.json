@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1766339959439,
+    "description" : "An ingestion flow for the banking source operation tables, customer, account, transaction_header, and the  transaction_item ",
+    "identifier" : "bankingsourcenifiv272ingestionflow",
+    "lastModifiedTimestamp" : 1766339959439,
+    "name" : "banking_source_nifi_v2_7_2_ingestion_flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}

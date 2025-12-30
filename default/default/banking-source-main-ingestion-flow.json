@@ -1,0 +1,11 @@
+{
+  "flow" : {
+    "createdTimestamp" : 1767110757231,
+    "description" : "",
+    "identifier" : "banking-source-main-ingestion-flow",
+    "lastModifiedTimestamp" : 1767110757231,
+    "name" : "banking-source-main-ingestion-flow",
+    "versionCount" : 0
+  },
+  "latest" : false
+}

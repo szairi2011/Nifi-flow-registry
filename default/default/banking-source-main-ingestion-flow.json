@@ -1492,13 +1492,13 @@
         "destination" : {
           "comments" : "",
           "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
-          "id" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
+          "id" : "9d355494-0888-3a8c-a2bf-a9cc5590ea74",
           "name" : "UpdateAttribute - trans. header filename",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "2156dbac-f461-3572-965f-7e15cc5559d2",
+        "identifier" : "176eb5ef-b8df-3e97-87c2-c5d34d0a8daa",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -1509,7 +1509,7 @@
         "source" : {
           "comments" : "",
           "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
-          "id" : "84d7b12e-2d67-31b9-b310-94df57474e14",
+          "id" : "311b4829-139b-3758-ac5c-68f7c6269bfb",
           "name" : "ConvertRecord - JSON to Avro (Transaction_header)",
           "type" : "PROCESSOR"
         },
@@ -1522,13 +1522,43 @@
         "destination" : {
           "comments" : "",
           "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
-          "id" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
+          "id" : "de49463a-77df-3f25-a00c-c69523e6832f",
+          "name" : "LogAttribute - trans. failure",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
+        "identifier" : "3a3fc987-b5a1-3a6b-b431-98aff9f26a58",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
+          "id" : "85b14567-1ab6-3a19-b3dc-36c6ae1f81e7",
+          "name" : "PutFile - stage trans. header Avro",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 4
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
+          "id" : "85b14567-1ab6-3a19-b3dc-36c6ae1f81e7",
           "name" : "PutFile - stage trans. header Avro",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "9e45a8e7-575b-38db-ac75-1e3d30cf0096",
+        "identifier" : "f6eadb61-bddc-36a5-b6f6-2d65cdeff673",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -1539,7 +1569,7 @@
         "source" : {
           "comments" : "",
           "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
-          "id" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
+          "id" : "9d355494-0888-3a8c-a2bf-a9cc5590ea74",
           "name" : "UpdateAttribute - trans. header filename",
           "type" : "PROCESSOR"
         },
@@ -1552,13 +1582,13 @@
         "destination" : {
           "comments" : "",
           "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
-          "id" : "84d7b12e-2d67-31b9-b310-94df57474e14",
+          "id" : "311b4829-139b-3758-ac5c-68f7c6269bfb",
           "name" : "ConvertRecord - JSON to Avro (Transaction_header)",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "d7ac5484-bed3-3ae9-88b0-a179d593e862",
+        "identifier" : "fc955d75-8bff-398c-8b58-9698a241082d",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -1569,41 +1599,11 @@
         "source" : {
           "comments" : "",
           "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
-          "id" : "28e72b38-c0c1-311c-8ba3-d191b4d30c1e",
+          "id" : "e038e3a0-3670-37c3-aeea-9a61c559c912",
           "name" : "QDBTR - Transaction Header",
           "type" : "PROCESSOR"
         },
         "zIndex" : 1
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
-          "id" : "f05b0856-7c96-3c11-b305-c1ad18b256dc",
-          "name" : "LogAttribute - trans. failure",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "ef4d992a-c76c-3a26-8b5a-fe4bdda94fea",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "failure" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "6fa61446-019b-1000-9763-3d694d8efe52",
-          "id" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
-          "name" : "PutFile - stage trans. header Avro",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 4
       } ],
       "controllerServices" : [ {
         "bulletinLevel" : "WARN",
@@ -2069,6 +2069,343 @@
       },
       "processGroups" : [ ],
       "processors" : [ {
+        "autoTerminatedRelationships" : [ "failure" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
+        "identifier" : "311b4829-139b-3758-ac5c-68f7c6269bfb",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "ConvertRecord - JSON to Avro (Transaction_header)",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 240.0,
+          "y" : -160.0
+        },
+        "properties" : {
+          "Include Zero Record FlowFiles" : "true",
+          "Record Writer" : "0b212bf6-d0c5-3d49-bf5c-92045517196c",
+          "Record Reader" : "b35e8ac2-c743-3b71-91cf-aecfbd83908a"
+        },
+        "propertyDescriptors" : {
+          "Include Zero Record FlowFiles" : {
+            "displayName" : "Include Zero Record FlowFiles",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Include Zero Record FlowFiles",
+            "sensitive" : false
+          },
+          "Record Writer" : {
+            "displayName" : "Record Writer",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Writer",
+            "sensitive" : false
+          },
+          "Record Reader" : {
+            "displayName" : "Record Reader",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Reader",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.ConvertRecord",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "success" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
+        "identifier" : "85b14567-1ab6-3a19-b3dc-36c6ae1f81e7",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "PutFile - stage trans. header Avro",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -472.0,
+          "y" : 112.0
+        },
+        "properties" : {
+          "Create Missing Directories" : "true",
+          "Directory" : "C:\\Users\\sofiane\\work\\learn-intellij\\data-vault-modeling-etl\\warehouse\\staging\\transaction_header",
+          "Conflict Resolution Strategy" : "replace"
+        },
+        "propertyDescriptors" : {
+          "Group" : {
+            "displayName" : "Group",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Group",
+            "sensitive" : false
+          },
+          "Owner" : {
+            "displayName" : "Owner",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Owner",
+            "sensitive" : false
+          },
+          "Create Missing Directories" : {
+            "displayName" : "Create Missing Directories",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Create Missing Directories",
+            "sensitive" : false
+          },
+          "Permissions" : {
+            "displayName" : "Permissions",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Permissions",
+            "sensitive" : false
+          },
+          "Maximum File Count" : {
+            "displayName" : "Maximum File Count",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Count",
+            "sensitive" : false
+          },
+          "Last Modified Time" : {
+            "displayName" : "Last Modified Time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Last Modified Time",
+            "sensitive" : false
+          },
+          "Directory" : {
+            "displayName" : "Directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Directory",
+            "sensitive" : false
+          },
+          "Conflict Resolution Strategy" : {
+            "displayName" : "Conflict Resolution Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Conflict Resolution Strategy",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.PutFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
+        "identifier" : "9d355494-0888-3a8c-a2bf-a9cc5590ea74",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute - trans. header filename",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 240.0,
+          "y" : 112.0
+        },
+        "properties" : {
+          "filename" : "transaction_${now():format('yyyyMMdd_HHmmss')}_${UUID()}.avro",
+          "Store State" : "Do not store state",
+          "Cache Value Lookup Cache Size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "filename" : {
+            "displayName" : "filename",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "filename",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "Cache Value Lookup Cache Size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Cache Value Lookup Cache Size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "success" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
+        "identifier" : "de49463a-77df-3f25-a00c-c69523e6832f",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "LogAttribute - trans. failure",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -472.0,
+          "y" : 352.0
+        },
+        "properties" : {
+          "Log FlowFile Properties" : "true",
+          "Log Level" : "info",
+          "Output Format" : "Line per Attribute",
+          "Log Payload" : "true",
+          "Character Set" : "UTF-8",
+          "Attributes to Log Regular Expression" : ".*"
+        },
+        "propertyDescriptors" : {
+          "Log FlowFile Properties" : {
+            "displayName" : "Log FlowFile Properties",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log FlowFile Properties",
+            "sensitive" : false
+          },
+          "Log Level" : {
+            "displayName" : "Log Level",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Level",
+            "sensitive" : false
+          },
+          "Attributes to Ignore" : {
+            "displayName" : "Attributes to Ignore",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Ignore",
+            "sensitive" : false
+          },
+          "Attributes to Log" : {
+            "displayName" : "Attributes to Log",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Log",
+            "sensitive" : false
+          },
+          "Attributes to Ignore Regular Expression" : {
+            "displayName" : "Attributes to Ignore Regular Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Ignore Regular Expression",
+            "sensitive" : false
+          },
+          "Output Format" : {
+            "displayName" : "Output Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Output Format",
+            "sensitive" : false
+          },
+          "Log Payload" : {
+            "displayName" : "Log Payload",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Payload",
+            "sensitive" : false
+          },
+          "Log Prefix" : {
+            "displayName" : "Log Prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Prefix",
+            "sensitive" : false
+          },
+          "Character Set" : {
+            "displayName" : "Character Set",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Character Set",
+            "sensitive" : false
+          },
+          "Attributes to Log Regular Expression" : {
+            "displayName" : "Attributes to Log Regular Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Log Regular Expression",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.LogAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
         "autoTerminatedRelationships" : [ ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -2082,7 +2419,7 @@
         "concurrentlySchedulableTaskCount" : 1,
         "executionNode" : "PRIMARY",
         "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "28e72b38-c0c1-311c-8ba3-d191b4d30c1e",
+        "identifier" : "e038e3a0-3670-37c3-aeea-9a61c559c912",
         "maxBackoffPeriod" : "10 mins",
         "name" : "QDBTR - Transaction Header",
         "penaltyDuration" : "30 sec",
@@ -2258,343 +2595,6 @@
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.QueryDatabaseTableRecord",
         "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "success" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "PutFile - stage trans. header Avro",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : -472.0,
-          "y" : 112.0
-        },
-        "properties" : {
-          "Create Missing Directories" : "true",
-          "Directory" : "C:\\Users\\sofiane\\work\\learn-intellij\\data-vault-modeling-etl\\warehouse\\staging\\transaction",
-          "Conflict Resolution Strategy" : "replace"
-        },
-        "propertyDescriptors" : {
-          "Group" : {
-            "displayName" : "Group",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Group",
-            "sensitive" : false
-          },
-          "Owner" : {
-            "displayName" : "Owner",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Owner",
-            "sensitive" : false
-          },
-          "Create Missing Directories" : {
-            "displayName" : "Create Missing Directories",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Create Missing Directories",
-            "sensitive" : false
-          },
-          "Permissions" : {
-            "displayName" : "Permissions",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Permissions",
-            "sensitive" : false
-          },
-          "Maximum File Count" : {
-            "displayName" : "Maximum File Count",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Maximum File Count",
-            "sensitive" : false
-          },
-          "Last Modified Time" : {
-            "displayName" : "Last Modified Time",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Last Modified Time",
-            "sensitive" : false
-          },
-          "Directory" : {
-            "displayName" : "Directory",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Directory",
-            "sensitive" : false
-          },
-          "Conflict Resolution Strategy" : {
-            "displayName" : "Conflict Resolution Strategy",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Conflict Resolution Strategy",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 0,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.PutFile",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "failure" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "84d7b12e-2d67-31b9-b310-94df57474e14",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "ConvertRecord - JSON to Avro (Transaction_header)",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 240.0,
-          "y" : -160.0
-        },
-        "properties" : {
-          "Include Zero Record FlowFiles" : "true",
-          "Record Writer" : "0b212bf6-d0c5-3d49-bf5c-92045517196c",
-          "Record Reader" : "b35e8ac2-c743-3b71-91cf-aecfbd83908a"
-        },
-        "propertyDescriptors" : {
-          "Include Zero Record FlowFiles" : {
-            "displayName" : "Include Zero Record FlowFiles",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Include Zero Record FlowFiles",
-            "sensitive" : false
-          },
-          "Record Writer" : {
-            "displayName" : "Record Writer",
-            "dynamic" : false,
-            "identifiesControllerService" : true,
-            "name" : "Record Writer",
-            "sensitive" : false
-          },
-          "Record Reader" : {
-            "displayName" : "Record Reader",
-            "dynamic" : false,
-            "identifiesControllerService" : true,
-            "name" : "Record Reader",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 0,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.ConvertRecord",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-update-attribute-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "UpdateAttribute - trans. header filename",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 240.0,
-          "y" : 112.0
-        },
-        "properties" : {
-          "filename" : "transaction_${now():format('yyyyMMdd_HHmmss')}_${UUID()}.avro",
-          "Store State" : "Do not store state",
-          "Cache Value Lookup Cache Size" : "100"
-        },
-        "propertyDescriptors" : {
-          "Delete Attributes Expression" : {
-            "displayName" : "Delete Attributes Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Delete Attributes Expression",
-            "sensitive" : false
-          },
-          "filename" : {
-            "displayName" : "filename",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "filename",
-            "sensitive" : false
-          },
-          "Store State" : {
-            "displayName" : "Store State",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Store State",
-            "sensitive" : false
-          },
-          "Cache Value Lookup Cache Size" : {
-            "displayName" : "Cache Value Lookup Cache Size",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Cache Value Lookup Cache Size",
-            "sensitive" : false
-          },
-          "Stateful Variables Initial Value" : {
-            "displayName" : "Stateful Variables Initial Value",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Stateful Variables Initial Value",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "success" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "6fa61446-019b-1000-9763-3d694d8efe52",
-        "identifier" : "f05b0856-7c96-3c11-b305-c1ad18b256dc",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "LogAttribute - trans. failure",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : -472.0,
-          "y" : 352.0
-        },
-        "properties" : {
-          "Log FlowFile Properties" : "true",
-          "Log Level" : "info",
-          "Output Format" : "Line per Attribute",
-          "Log Payload" : "true",
-          "Character Set" : "UTF-8",
-          "Attributes to Log Regular Expression" : ".*"
-        },
-        "propertyDescriptors" : {
-          "Log FlowFile Properties" : {
-            "displayName" : "Log FlowFile Properties",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log FlowFile Properties",
-            "sensitive" : false
-          },
-          "Log Level" : {
-            "displayName" : "Log Level",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Level",
-            "sensitive" : false
-          },
-          "Attributes to Ignore" : {
-            "displayName" : "Attributes to Ignore",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Ignore",
-            "sensitive" : false
-          },
-          "Attributes to Log" : {
-            "displayName" : "Attributes to Log",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Log",
-            "sensitive" : false
-          },
-          "Attributes to Ignore Regular Expression" : {
-            "displayName" : "Attributes to Ignore Regular Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Ignore Regular Expression",
-            "sensitive" : false
-          },
-          "Output Format" : {
-            "displayName" : "Output Format",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Output Format",
-            "sensitive" : false
-          },
-          "Log Payload" : {
-            "displayName" : "Log Payload",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Payload",
-            "sensitive" : false
-          },
-          "Log Prefix" : {
-            "displayName" : "Log Prefix",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Prefix",
-            "sensitive" : false
-          },
-          "Character Set" : {
-            "displayName" : "Character Set",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Character Set",
-            "sensitive" : false
-          },
-          "Attributes to Log Regular Expression" : {
-            "displayName" : "Attributes to Log Regular Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Log Regular Expression",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.LogAttribute",
-        "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
@@ -2610,13 +2610,43 @@
         "destination" : {
           "comments" : "",
           "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-          "id" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
+          "id" : "4edeabc6-260a-3d20-9e2a-f78bcbee90c6",
+          "name" : "LogAttribute - trans. failure",
+          "type" : "PROCESSOR"
+        },
+        "flowFileExpiration" : "0 sec",
+        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
+        "identifier" : "230aae4e-5927-3f62-847b-52e22b5b3385",
+        "labelIndex" : 0,
+        "loadBalanceCompression" : "DO_NOT_COMPRESS",
+        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+        "name" : "",
+        "partitioningAttribute" : "",
+        "prioritizers" : [ ],
+        "selectedRelationships" : [ "failure" ],
+        "source" : {
+          "comments" : "",
+          "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
+          "id" : "3fce8197-6c37-3411-a31f-b50f7fd4c4ca",
+          "name" : "PutFile - stage trans. item Avro",
+          "type" : "PROCESSOR"
+        },
+        "zIndex" : 4
+      }, {
+        "backPressureDataSizeThreshold" : "1 GB",
+        "backPressureObjectThreshold" : 10000,
+        "bends" : [ ],
+        "componentType" : "CONNECTION",
+        "destination" : {
+          "comments" : "",
+          "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
+          "id" : "a50657a7-e4e7-3033-85bc-ef69fbe0d2e5",
           "name" : "UpdateAttribute - trans. item filename",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "2156dbac-f461-3572-965f-7e15cc5559d2",
+        "identifier" : "663a1c45-8d2e-3643-8acf-e8eeb6748975",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -2627,7 +2657,7 @@
         "source" : {
           "comments" : "",
           "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-          "id" : "84d7b12e-2d67-31b9-b310-94df57474e14",
+          "id" : "0bbedab9-add8-3f9e-a718-2f29fe1d9c00",
           "name" : "ConvertRecord - JSON to Avro (Transaction_item)",
           "type" : "PROCESSOR"
         },
@@ -2640,13 +2670,13 @@
         "destination" : {
           "comments" : "",
           "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-          "id" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
+          "id" : "3fce8197-6c37-3411-a31f-b50f7fd4c4ca",
           "name" : "PutFile - stage trans. item Avro",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "9e45a8e7-575b-38db-ac75-1e3d30cf0096",
+        "identifier" : "c9c1e2bb-3453-3e03-a471-680ed403892b",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -2657,7 +2687,7 @@
         "source" : {
           "comments" : "",
           "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-          "id" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
+          "id" : "a50657a7-e4e7-3033-85bc-ef69fbe0d2e5",
           "name" : "UpdateAttribute - trans. item filename",
           "type" : "PROCESSOR"
         },
@@ -2670,13 +2700,13 @@
         "destination" : {
           "comments" : "",
           "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-          "id" : "84d7b12e-2d67-31b9-b310-94df57474e14",
+          "id" : "0bbedab9-add8-3f9e-a718-2f29fe1d9c00",
           "name" : "ConvertRecord - JSON to Avro (Transaction_item)",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "d7ac5484-bed3-3ae9-88b0-a179d593e862",
+        "identifier" : "ecf414aa-244e-39e9-884f-d964e6d9b43c",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -2687,41 +2717,11 @@
         "source" : {
           "comments" : "",
           "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-          "id" : "28e72b38-c0c1-311c-8ba3-d191b4d30c1e",
+          "id" : "df6b9667-e586-3fab-ab64-c201bdfa7c45",
           "name" : "QDBTR - Transaction Item",
           "type" : "PROCESSOR"
         },
         "zIndex" : 1
-      }, {
-        "backPressureDataSizeThreshold" : "1 GB",
-        "backPressureObjectThreshold" : 10000,
-        "bends" : [ ],
-        "componentType" : "CONNECTION",
-        "destination" : {
-          "comments" : "",
-          "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-          "id" : "f05b0856-7c96-3c11-b305-c1ad18b256dc",
-          "name" : "LogAttribute - trans. failure",
-          "type" : "PROCESSOR"
-        },
-        "flowFileExpiration" : "0 sec",
-        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "ef4d992a-c76c-3a26-8b5a-fe4bdda94fea",
-        "labelIndex" : 0,
-        "loadBalanceCompression" : "DO_NOT_COMPRESS",
-        "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-        "name" : "",
-        "partitioningAttribute" : "",
-        "prioritizers" : [ ],
-        "selectedRelationships" : [ "failure" ],
-        "source" : {
-          "comments" : "",
-          "groupId" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-          "id" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
-          "name" : "PutFile - stage trans. item Avro",
-          "type" : "PROCESSOR"
-        },
-        "zIndex" : 4
       } ],
       "controllerServices" : [ {
         "bulletinLevel" : "WARN",
@@ -3187,6 +3187,343 @@
       },
       "processGroups" : [ ],
       "processors" : [ {
+        "autoTerminatedRelationships" : [ "failure" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
+        "identifier" : "0bbedab9-add8-3f9e-a718-2f29fe1d9c00",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "ConvertRecord - JSON to Avro (Transaction_item)",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 240.0,
+          "y" : -160.0
+        },
+        "properties" : {
+          "Include Zero Record FlowFiles" : "true",
+          "Record Writer" : "0b212bf6-d0c5-3d49-bf5c-92045517196c",
+          "Record Reader" : "b35e8ac2-c743-3b71-91cf-aecfbd83908a"
+        },
+        "propertyDescriptors" : {
+          "Include Zero Record FlowFiles" : {
+            "displayName" : "Include Zero Record FlowFiles",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Include Zero Record FlowFiles",
+            "sensitive" : false
+          },
+          "Record Writer" : {
+            "displayName" : "Record Writer",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Writer",
+            "sensitive" : false
+          },
+          "Record Reader" : {
+            "displayName" : "Record Reader",
+            "dynamic" : false,
+            "identifiesControllerService" : true,
+            "name" : "Record Reader",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.ConvertRecord",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "success" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
+        "identifier" : "3fce8197-6c37-3411-a31f-b50f7fd4c4ca",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "PutFile - stage trans. item Avro",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -472.0,
+          "y" : 112.0
+        },
+        "properties" : {
+          "Create Missing Directories" : "true",
+          "Directory" : "C:\\Users\\sofiane\\work\\learn-intellij\\data-vault-modeling-etl\\warehouse\\staging\\transaction_item",
+          "Conflict Resolution Strategy" : "replace"
+        },
+        "propertyDescriptors" : {
+          "Group" : {
+            "displayName" : "Group",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Group",
+            "sensitive" : false
+          },
+          "Owner" : {
+            "displayName" : "Owner",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Owner",
+            "sensitive" : false
+          },
+          "Create Missing Directories" : {
+            "displayName" : "Create Missing Directories",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Create Missing Directories",
+            "sensitive" : false
+          },
+          "Permissions" : {
+            "displayName" : "Permissions",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Permissions",
+            "sensitive" : false
+          },
+          "Maximum File Count" : {
+            "displayName" : "Maximum File Count",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Count",
+            "sensitive" : false
+          },
+          "Last Modified Time" : {
+            "displayName" : "Last Modified Time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Last Modified Time",
+            "sensitive" : false
+          },
+          "Directory" : {
+            "displayName" : "Directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Directory",
+            "sensitive" : false
+          },
+          "Conflict Resolution Strategy" : {
+            "displayName" : "Conflict Resolution Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Conflict Resolution Strategy",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.PutFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "success" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
+        "identifier" : "4edeabc6-260a-3d20-9e2a-f78bcbee90c6",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "LogAttribute - trans. failure",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -472.0,
+          "y" : 352.0
+        },
+        "properties" : {
+          "Log FlowFile Properties" : "true",
+          "Log Level" : "info",
+          "Output Format" : "Line per Attribute",
+          "Log Payload" : "true",
+          "Character Set" : "UTF-8",
+          "Attributes to Log Regular Expression" : ".*"
+        },
+        "propertyDescriptors" : {
+          "Log FlowFile Properties" : {
+            "displayName" : "Log FlowFile Properties",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log FlowFile Properties",
+            "sensitive" : false
+          },
+          "Log Level" : {
+            "displayName" : "Log Level",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Level",
+            "sensitive" : false
+          },
+          "Attributes to Ignore" : {
+            "displayName" : "Attributes to Ignore",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Ignore",
+            "sensitive" : false
+          },
+          "Attributes to Log" : {
+            "displayName" : "Attributes to Log",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Log",
+            "sensitive" : false
+          },
+          "Attributes to Ignore Regular Expression" : {
+            "displayName" : "Attributes to Ignore Regular Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Ignore Regular Expression",
+            "sensitive" : false
+          },
+          "Output Format" : {
+            "displayName" : "Output Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Output Format",
+            "sensitive" : false
+          },
+          "Log Payload" : {
+            "displayName" : "Log Payload",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Payload",
+            "sensitive" : false
+          },
+          "Log Prefix" : {
+            "displayName" : "Log Prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Prefix",
+            "sensitive" : false
+          },
+          "Character Set" : {
+            "displayName" : "Character Set",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Character Set",
+            "sensitive" : false
+          },
+          "Attributes to Log Regular Expression" : {
+            "displayName" : "Attributes to Log Regular Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Log Regular Expression",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.LogAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-update-attribute-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
+        "identifier" : "a50657a7-e4e7-3033-85bc-ef69fbe0d2e5",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "UpdateAttribute - trans. item filename",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : 240.0,
+          "y" : 112.0
+        },
+        "properties" : {
+          "filename" : "transaction-item_${now():format('yyyyMMdd_HHmmss')}_${UUID()}.avro",
+          "Store State" : "Do not store state",
+          "Cache Value Lookup Cache Size" : "100"
+        },
+        "propertyDescriptors" : {
+          "Delete Attributes Expression" : {
+            "displayName" : "Delete Attributes Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Delete Attributes Expression",
+            "sensitive" : false
+          },
+          "filename" : {
+            "displayName" : "filename",
+            "dynamic" : true,
+            "identifiesControllerService" : false,
+            "name" : "filename",
+            "sensitive" : false
+          },
+          "Store State" : {
+            "displayName" : "Store State",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Store State",
+            "sensitive" : false
+          },
+          "Cache Value Lookup Cache Size" : {
+            "displayName" : "Cache Value Lookup Cache Size",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Cache Value Lookup Cache Size",
+            "sensitive" : false
+          },
+          "Stateful Variables Initial Value" : {
+            "displayName" : "Stateful Variables Initial Value",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Stateful Variables Initial Value",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
         "autoTerminatedRelationships" : [ ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -3200,7 +3537,7 @@
         "concurrentlySchedulableTaskCount" : 1,
         "executionNode" : "PRIMARY",
         "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "28e72b38-c0c1-311c-8ba3-d191b4d30c1e",
+        "identifier" : "df6b9667-e586-3fab-ab64-c201bdfa7c45",
         "maxBackoffPeriod" : "10 mins",
         "name" : "QDBTR - Transaction Item",
         "penaltyDuration" : "30 sec",
@@ -3376,343 +3713,6 @@
         "style" : { },
         "type" : "org.apache.nifi.processors.standard.QueryDatabaseTableRecord",
         "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "success" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "PutFile - stage trans. item Avro",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : -472.0,
-          "y" : 112.0
-        },
-        "properties" : {
-          "Create Missing Directories" : "true",
-          "Directory" : "C:\\Users\\sofiane\\work\\learn-intellij\\data-vault-modeling-etl\\warehouse\\staging\\transaction-item",
-          "Conflict Resolution Strategy" : "replace"
-        },
-        "propertyDescriptors" : {
-          "Group" : {
-            "displayName" : "Group",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Group",
-            "sensitive" : false
-          },
-          "Owner" : {
-            "displayName" : "Owner",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Owner",
-            "sensitive" : false
-          },
-          "Create Missing Directories" : {
-            "displayName" : "Create Missing Directories",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Create Missing Directories",
-            "sensitive" : false
-          },
-          "Permissions" : {
-            "displayName" : "Permissions",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Permissions",
-            "sensitive" : false
-          },
-          "Maximum File Count" : {
-            "displayName" : "Maximum File Count",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Maximum File Count",
-            "sensitive" : false
-          },
-          "Last Modified Time" : {
-            "displayName" : "Last Modified Time",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Last Modified Time",
-            "sensitive" : false
-          },
-          "Directory" : {
-            "displayName" : "Directory",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Directory",
-            "sensitive" : false
-          },
-          "Conflict Resolution Strategy" : {
-            "displayName" : "Conflict Resolution Strategy",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Conflict Resolution Strategy",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 0,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.PutFile",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "failure" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "84d7b12e-2d67-31b9-b310-94df57474e14",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "ConvertRecord - JSON to Avro (Transaction_item)",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 240.0,
-          "y" : -160.0
-        },
-        "properties" : {
-          "Include Zero Record FlowFiles" : "true",
-          "Record Writer" : "0b212bf6-d0c5-3d49-bf5c-92045517196c",
-          "Record Reader" : "b35e8ac2-c743-3b71-91cf-aecfbd83908a"
-        },
-        "propertyDescriptors" : {
-          "Include Zero Record FlowFiles" : {
-            "displayName" : "Include Zero Record FlowFiles",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Include Zero Record FlowFiles",
-            "sensitive" : false
-          },
-          "Record Writer" : {
-            "displayName" : "Record Writer",
-            "dynamic" : false,
-            "identifiesControllerService" : true,
-            "name" : "Record Writer",
-            "sensitive" : false
-          },
-          "Record Reader" : {
-            "displayName" : "Record Reader",
-            "dynamic" : false,
-            "identifiesControllerService" : true,
-            "name" : "Record Reader",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 0,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.ConvertRecord",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-update-attribute-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "UpdateAttribute - trans. item filename",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : 240.0,
-          "y" : 112.0
-        },
-        "properties" : {
-          "filename" : "transaction-item_${now():format('yyyyMMdd_HHmmss')}_${UUID()}.avro",
-          "Store State" : "Do not store state",
-          "Cache Value Lookup Cache Size" : "100"
-        },
-        "propertyDescriptors" : {
-          "Delete Attributes Expression" : {
-            "displayName" : "Delete Attributes Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Delete Attributes Expression",
-            "sensitive" : false
-          },
-          "filename" : {
-            "displayName" : "filename",
-            "dynamic" : true,
-            "identifiesControllerService" : false,
-            "name" : "filename",
-            "sensitive" : false
-          },
-          "Store State" : {
-            "displayName" : "Store State",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Store State",
-            "sensitive" : false
-          },
-          "Cache Value Lookup Cache Size" : {
-            "displayName" : "Cache Value Lookup Cache Size",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Cache Value Lookup Cache Size",
-            "sensitive" : false
-          },
-          "Stateful Variables Initial Value" : {
-            "displayName" : "Stateful Variables Initial Value",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Stateful Variables Initial Value",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
-        "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "success" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "6fce0678-019b-1000-b4ea-1b8464b255be",
-        "identifier" : "f05b0856-7c96-3c11-b305-c1ad18b256dc",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "LogAttribute - trans. failure",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : -472.0,
-          "y" : 352.0
-        },
-        "properties" : {
-          "Log FlowFile Properties" : "true",
-          "Log Level" : "info",
-          "Output Format" : "Line per Attribute",
-          "Log Payload" : "true",
-          "Character Set" : "UTF-8",
-          "Attributes to Log Regular Expression" : ".*"
-        },
-        "propertyDescriptors" : {
-          "Log FlowFile Properties" : {
-            "displayName" : "Log FlowFile Properties",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log FlowFile Properties",
-            "sensitive" : false
-          },
-          "Log Level" : {
-            "displayName" : "Log Level",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Level",
-            "sensitive" : false
-          },
-          "Attributes to Ignore" : {
-            "displayName" : "Attributes to Ignore",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Ignore",
-            "sensitive" : false
-          },
-          "Attributes to Log" : {
-            "displayName" : "Attributes to Log",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Log",
-            "sensitive" : false
-          },
-          "Attributes to Ignore Regular Expression" : {
-            "displayName" : "Attributes to Ignore Regular Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Ignore Regular Expression",
-            "sensitive" : false
-          },
-          "Output Format" : {
-            "displayName" : "Output Format",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Output Format",
-            "sensitive" : false
-          },
-          "Log Payload" : {
-            "displayName" : "Log Payload",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Payload",
-            "sensitive" : false
-          },
-          "Log Prefix" : {
-            "displayName" : "Log Prefix",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Prefix",
-            "sensitive" : false
-          },
-          "Character Set" : {
-            "displayName" : "Character Set",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Character Set",
-            "sensitive" : false
-          },
-          "Attributes to Log Regular Expression" : {
-            "displayName" : "Attributes to Log Regular Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Log Regular Expression",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.LogAttribute",
-        "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
@@ -3728,13 +3728,13 @@
         "destination" : {
           "comments" : "",
           "groupId" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-          "id" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
+          "id" : "eeee016d-f8fb-3898-88e7-0913e3c758dd",
           "name" : "UpdateAttribute - customer filename",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "2156dbac-f461-3572-965f-7e15cc5559d2",
+        "identifier" : "07a82f35-e4ef-306a-94ba-6f1e3c5712aa",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -3745,7 +3745,7 @@
         "source" : {
           "comments" : "",
           "groupId" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-          "id" : "84d7b12e-2d67-31b9-b310-94df57474e14",
+          "id" : "95071e40-d5e0-3234-b18f-405d18119c91",
           "name" : "ConvertRecord - JSON to Avro (Customer)",
           "type" : "PROCESSOR"
         },
@@ -3758,28 +3758,28 @@
         "destination" : {
           "comments" : "",
           "groupId" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-          "id" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
-          "name" : "PutFile - stage customer Avro",
+          "id" : "4f601eba-ebe9-37e5-ad99-50f3d581c98a",
+          "name" : "LogAttribute - customer failure",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "9e45a8e7-575b-38db-ac75-1e3d30cf0096",
+        "identifier" : "18f2b4aa-b111-3810-b2a0-0d56d85059d4",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
         "name" : "",
         "partitioningAttribute" : "",
         "prioritizers" : [ ],
-        "selectedRelationships" : [ "success" ],
+        "selectedRelationships" : [ "failure" ],
         "source" : {
           "comments" : "",
           "groupId" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-          "id" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
-          "name" : "UpdateAttribute - customer filename",
+          "id" : "3c3ef51e-fb20-3857-82e2-d71ed9ebf494",
+          "name" : "PutFile - stage customer Avro",
           "type" : "PROCESSOR"
         },
-        "zIndex" : 3
+        "zIndex" : 4
       }, {
         "backPressureDataSizeThreshold" : "1 GB",
         "backPressureObjectThreshold" : 10000,
@@ -3788,13 +3788,13 @@
         "destination" : {
           "comments" : "",
           "groupId" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-          "id" : "84d7b12e-2d67-31b9-b310-94df57474e14",
+          "id" : "95071e40-d5e0-3234-b18f-405d18119c91",
           "name" : "ConvertRecord - JSON to Avro (Customer)",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "d7ac5484-bed3-3ae9-88b0-a179d593e862",
+        "identifier" : "2ea48035-51c4-3c7e-bcee-a38545beef4d",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
@@ -3805,7 +3805,7 @@
         "source" : {
           "comments" : "",
           "groupId" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-          "id" : "28e72b38-c0c1-311c-8ba3-d191b4d30c1e",
+          "id" : "56460f84-66c4-3568-9399-9c21022c0e25",
           "name" : "QDBTR - Customer",
           "type" : "PROCESSOR"
         },
@@ -3818,28 +3818,28 @@
         "destination" : {
           "comments" : "",
           "groupId" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-          "id" : "f05b0856-7c96-3c11-b305-c1ad18b256dc",
-          "name" : "LogAttribute - customer failure",
+          "id" : "3c3ef51e-fb20-3857-82e2-d71ed9ebf494",
+          "name" : "PutFile - stage customer Avro",
           "type" : "PROCESSOR"
         },
         "flowFileExpiration" : "0 sec",
         "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "ef4d992a-c76c-3a26-8b5a-fe4bdda94fea",
+        "identifier" : "77613fa0-11f6-3392-a07b-565ee88ed546",
         "labelIndex" : 0,
         "loadBalanceCompression" : "DO_NOT_COMPRESS",
         "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
         "name" : "",
         "partitioningAttribute" : "",
         "prioritizers" : [ ],
-        "selectedRelationships" : [ "failure" ],
+        "selectedRelationships" : [ "success" ],
         "source" : {
           "comments" : "",
           "groupId" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-          "id" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
-          "name" : "PutFile - stage customer Avro",
+          "id" : "eeee016d-f8fb-3898-88e7-0913e3c758dd",
+          "name" : "UpdateAttribute - customer filename",
           "type" : "PROCESSOR"
         },
-        "zIndex" : 4
+        "zIndex" : 3
       } ],
       "controllerServices" : [ {
         "bulletinLevel" : "WARN",
@@ -4574,6 +4574,211 @@
       },
       "processGroups" : [ ],
       "processors" : [ {
+        "autoTerminatedRelationships" : [ "success" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
+        "identifier" : "3c3ef51e-fb20-3857-82e2-d71ed9ebf494",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "PutFile - stage customer Avro",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -288.0,
+          "y" : 96.0
+        },
+        "properties" : {
+          "Create Missing Directories" : "true",
+          "Directory" : "C:\\Users\\sofiane\\work\\learn-intellij\\data-vault-modeling-etl\\warehouse\\staging\\customer",
+          "Conflict Resolution Strategy" : "replace"
+        },
+        "propertyDescriptors" : {
+          "Group" : {
+            "displayName" : "Group",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Group",
+            "sensitive" : false
+          },
+          "Owner" : {
+            "displayName" : "Owner",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Owner",
+            "sensitive" : false
+          },
+          "Create Missing Directories" : {
+            "displayName" : "Create Missing Directories",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Create Missing Directories",
+            "sensitive" : false
+          },
+          "Permissions" : {
+            "displayName" : "Permissions",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Permissions",
+            "sensitive" : false
+          },
+          "Maximum File Count" : {
+            "displayName" : "Maximum File Count",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Maximum File Count",
+            "sensitive" : false
+          },
+          "Last Modified Time" : {
+            "displayName" : "Last Modified Time",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Last Modified Time",
+            "sensitive" : false
+          },
+          "Directory" : {
+            "displayName" : "Directory",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Directory",
+            "sensitive" : false
+          },
+          "Conflict Resolution Strategy" : {
+            "displayName" : "Conflict Resolution Strategy",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Conflict Resolution Strategy",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 0,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.PutFile",
+        "yieldDuration" : "1 sec"
+      }, {
+        "autoTerminatedRelationships" : [ "success" ],
+        "backoffMechanism" : "PENALIZE_FLOWFILE",
+        "bulletinLevel" : "WARN",
+        "bundle" : {
+          "artifact" : "nifi-standard-nar",
+          "group" : "org.apache.nifi",
+          "version" : "2.7.2"
+        },
+        "comments" : "",
+        "componentType" : "PROCESSOR",
+        "concurrentlySchedulableTaskCount" : 1,
+        "executionNode" : "ALL",
+        "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
+        "identifier" : "4f601eba-ebe9-37e5-ad99-50f3d581c98a",
+        "maxBackoffPeriod" : "10 mins",
+        "name" : "LogAttribute - customer failure",
+        "penaltyDuration" : "30 sec",
+        "position" : {
+          "x" : -472.0,
+          "y" : 352.0
+        },
+        "properties" : {
+          "Log FlowFile Properties" : "true",
+          "Log Level" : "info",
+          "Output Format" : "Line per Attribute",
+          "Log Payload" : "true",
+          "Character Set" : "UTF-8",
+          "Attributes to Log Regular Expression" : ".*"
+        },
+        "propertyDescriptors" : {
+          "Log FlowFile Properties" : {
+            "displayName" : "Log FlowFile Properties",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log FlowFile Properties",
+            "sensitive" : false
+          },
+          "Log Level" : {
+            "displayName" : "Log Level",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Level",
+            "sensitive" : false
+          },
+          "Attributes to Ignore" : {
+            "displayName" : "Attributes to Ignore",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Ignore",
+            "sensitive" : false
+          },
+          "Attributes to Log" : {
+            "displayName" : "Attributes to Log",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Log",
+            "sensitive" : false
+          },
+          "Attributes to Ignore Regular Expression" : {
+            "displayName" : "Attributes to Ignore Regular Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Ignore Regular Expression",
+            "sensitive" : false
+          },
+          "Output Format" : {
+            "displayName" : "Output Format",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Output Format",
+            "sensitive" : false
+          },
+          "Log Payload" : {
+            "displayName" : "Log Payload",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Payload",
+            "sensitive" : false
+          },
+          "Log Prefix" : {
+            "displayName" : "Log Prefix",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Log Prefix",
+            "sensitive" : false
+          },
+          "Character Set" : {
+            "displayName" : "Character Set",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Character Set",
+            "sensitive" : false
+          },
+          "Attributes to Log Regular Expression" : {
+            "displayName" : "Attributes to Log Regular Expression",
+            "dynamic" : false,
+            "identifiesControllerService" : false,
+            "name" : "Attributes to Log Regular Expression",
+            "sensitive" : false
+          }
+        },
+        "retriedRelationships" : [ ],
+        "retryCount" : 10,
+        "runDurationMillis" : 25,
+        "scheduledState" : "ENABLED",
+        "schedulingPeriod" : "0 sec",
+        "schedulingStrategy" : "TIMER_DRIVEN",
+        "style" : { },
+        "type" : "org.apache.nifi.processors.standard.LogAttribute",
+        "yieldDuration" : "1 sec"
+      }, {
         "autoTerminatedRelationships" : [ ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -4587,7 +4792,7 @@
         "concurrentlySchedulableTaskCount" : 1,
         "executionNode" : "PRIMARY",
         "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "28e72b38-c0c1-311c-8ba3-d191b4d30c1e",
+        "identifier" : "56460f84-66c4-3568-9399-9c21022c0e25",
         "maxBackoffPeriod" : "10 mins",
         "name" : "QDBTR - Customer",
         "penaltyDuration" : "30 sec",
@@ -4764,100 +4969,6 @@
         "type" : "org.apache.nifi.processors.standard.QueryDatabaseTableRecord",
         "yieldDuration" : "1 sec"
       }, {
-        "autoTerminatedRelationships" : [ "success" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "5d8e2533-6940-3606-a19e-c2a0c4aa311d",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "PutFile - stage customer Avro",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : -288.0,
-          "y" : 96.0
-        },
-        "properties" : {
-          "Create Missing Directories" : "true",
-          "Directory" : "C:\\Users\\sofiane\\work\\learn-intellij\\data-vault-modeling-etl\\warehouse\\staging\\customer",
-          "Conflict Resolution Strategy" : "replace"
-        },
-        "propertyDescriptors" : {
-          "Group" : {
-            "displayName" : "Group",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Group",
-            "sensitive" : false
-          },
-          "Owner" : {
-            "displayName" : "Owner",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Owner",
-            "sensitive" : false
-          },
-          "Create Missing Directories" : {
-            "displayName" : "Create Missing Directories",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Create Missing Directories",
-            "sensitive" : false
-          },
-          "Permissions" : {
-            "displayName" : "Permissions",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Permissions",
-            "sensitive" : false
-          },
-          "Maximum File Count" : {
-            "displayName" : "Maximum File Count",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Maximum File Count",
-            "sensitive" : false
-          },
-          "Last Modified Time" : {
-            "displayName" : "Last Modified Time",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Last Modified Time",
-            "sensitive" : false
-          },
-          "Directory" : {
-            "displayName" : "Directory",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Directory",
-            "sensitive" : false
-          },
-          "Conflict Resolution Strategy" : {
-            "displayName" : "Conflict Resolution Strategy",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Conflict Resolution Strategy",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 0,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.PutFile",
-        "yieldDuration" : "1 sec"
-      }, {
         "autoTerminatedRelationships" : [ "failure" ],
         "backoffMechanism" : "PENALIZE_FLOWFILE",
         "bulletinLevel" : "WARN",
@@ -4871,7 +4982,7 @@
         "concurrentlySchedulableTaskCount" : 1,
         "executionNode" : "ALL",
         "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "84d7b12e-2d67-31b9-b310-94df57474e14",
+        "identifier" : "95071e40-d5e0-3234-b18f-405d18119c91",
         "maxBackoffPeriod" : "10 mins",
         "name" : "ConvertRecord - JSON to Avro (Customer)",
         "penaltyDuration" : "30 sec",
@@ -4930,7 +5041,7 @@
         "concurrentlySchedulableTaskCount" : 1,
         "executionNode" : "ALL",
         "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "927ea5b4-23cd-3ecc-ae19-a2b54810288d",
+        "identifier" : "eeee016d-f8fb-3898-88e7-0913e3c758dd",
         "maxBackoffPeriod" : "10 mins",
         "name" : "UpdateAttribute - customer filename",
         "penaltyDuration" : "30 sec",
@@ -4989,117 +5100,6 @@
         "style" : { },
         "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
         "yieldDuration" : "1 sec"
-      }, {
-        "autoTerminatedRelationships" : [ "success" ],
-        "backoffMechanism" : "PENALIZE_FLOWFILE",
-        "bulletinLevel" : "WARN",
-        "bundle" : {
-          "artifact" : "nifi-standard-nar",
-          "group" : "org.apache.nifi",
-          "version" : "2.7.2"
-        },
-        "comments" : "",
-        "componentType" : "PROCESSOR",
-        "concurrentlySchedulableTaskCount" : 1,
-        "executionNode" : "ALL",
-        "groupIdentifier" : "9de9c13f-cf7d-3b0b-831d-c186be975640",
-        "identifier" : "f05b0856-7c96-3c11-b305-c1ad18b256dc",
-        "maxBackoffPeriod" : "10 mins",
-        "name" : "LogAttribute - customer failure",
-        "penaltyDuration" : "30 sec",
-        "position" : {
-          "x" : -472.0,
-          "y" : 352.0
-        },
-        "properties" : {
-          "Log FlowFile Properties" : "true",
-          "Log Level" : "info",
-          "Output Format" : "Line per Attribute",
-          "Log Payload" : "true",
-          "Character Set" : "UTF-8",
-          "Attributes to Log Regular Expression" : ".*"
-        },
-        "propertyDescriptors" : {
-          "Log FlowFile Properties" : {
-            "displayName" : "Log FlowFile Properties",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log FlowFile Properties",
-            "sensitive" : false
-          },
-          "Log Level" : {
-            "displayName" : "Log Level",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Level",
-            "sensitive" : false
-          },
-          "Attributes to Ignore" : {
-            "displayName" : "Attributes to Ignore",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Ignore",
-            "sensitive" : false
-          },
-          "Attributes to Log" : {
-            "displayName" : "Attributes to Log",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Log",
-            "sensitive" : false
-          },
-          "Attributes to Ignore Regular Expression" : {
-            "displayName" : "Attributes to Ignore Regular Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Ignore Regular Expression",
-            "sensitive" : false
-          },
-          "Output Format" : {
-            "displayName" : "Output Format",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Output Format",
-            "sensitive" : false
-          },
-          "Log Payload" : {
-            "displayName" : "Log Payload",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Payload",
-            "sensitive" : false
-          },
-          "Log Prefix" : {
-            "displayName" : "Log Prefix",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Log Prefix",
-            "sensitive" : false
-          },
-          "Character Set" : {
-            "displayName" : "Character Set",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Character Set",
-            "sensitive" : false
-          },
-          "Attributes to Log Regular Expression" : {
-            "displayName" : "Attributes to Log Regular Expression",
-            "dynamic" : false,
-            "identifiesControllerService" : false,
-            "name" : "Attributes to Log Regular Expression",
-            "sensitive" : false
-          }
-        },
-        "retriedRelationships" : [ ],
-        "retryCount" : 10,
-        "runDurationMillis" : 25,
-        "scheduledState" : "ENABLED",
-        "schedulingPeriod" : "0 sec",
-        "schedulingStrategy" : "TIMER_DRIVEN",
-        "style" : { },
-        "type" : "org.apache.nifi.processors.standard.LogAttribute",
-        "yieldDuration" : "1 sec"
       } ],
       "remoteProcessGroups" : [ ],
       "scheduledState" : "ENABLED",
@@ -5131,6 +5131,6 @@
   "snapshotMetadata" : {
     "author" : "9caf7f41-b99c-4327-9d86-c7a8fbee0092",
     "flowIdentifier" : "banking-source-main-ingestion-flow",
-    "timestamp" : 1767110758201
+    "timestamp" : 1767696888953
   }
 }
